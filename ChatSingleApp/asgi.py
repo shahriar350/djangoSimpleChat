@@ -17,6 +17,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ChatSingleApp.settings')
 application = ProtocolTypeRouter({
     'http': get_asgi_application(),
     'websocket': URLRouter(
-        routes=routing.websocket_urlpatters
+        routing.websocket_urlpatters
     )
 })
